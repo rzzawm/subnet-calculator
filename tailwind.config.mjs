@@ -7,6 +7,10 @@ export default {
             fontFamily: {
                 sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
             },
+            container: {
+                center: true,
+                padding: "1rem",
+            },
         },
     },
     plugins: [require("daisyui")],
