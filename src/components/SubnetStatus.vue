@@ -10,11 +10,15 @@ const hostRange = computed(() => getHostRange(networkStatus.value.networkAddress
 </script>
 
 <template>
-    <h1>{{ IP.address }}/{{ Subnet.maskBits }}</h1>
-    <p>Class of IP: {{ IP.range }}</p>
-    <p>Subnet mask: {{ subnetmask }}</p>
-    <p>Wildcard mask: {{ wildcardMask }}</p>
-    <p>Network Address: {{ networkStatus.networkAddress }}</p>
-    <p>Broadcast Address: {{ networkStatus.broadcastAddress }}</p>
-    <p>Host range: {{ hostRange.from }} - {{ hostRange.to }}</p>
+    <section class="grid place-items-center">
+        <div class="grid gap-2">
+            <p class="text-2xl font-black">{{ IP.address }}/{{ Subnet.maskBits }}</p>
+            <p>Class of IP: {{ IP.range }}</p>
+            <p>Subnet mask: {{ subnetmask }}</p>
+            <p>Wildcard mask: {{ wildcardMask }}</p>
+            <p>Network Address: {{ networkStatus.networkAddress }}</p>
+            <p>Broadcast Address: {{ networkStatus.broadcastAddress }}</p>
+            <p>Host range: {{ hostRange.from }} - {{ hostRange.to }}</p>
+        </div>
+    </section>
 </template>
