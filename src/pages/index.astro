@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/inter";
+import Calculator from "../components/Calculator.vue";
 ---
 
 <html lang="en">
@@ -17,8 +18,7 @@ import "@fontsource-variable/inter";
             </div>
         </header>
         <main class="container grow">
-            <h1>Astro</h1>
-            <button class="btn btn-neutral">Hello daisy UI</button>
+            <Calculator client:load />
         </main>
         <footer>
             <div class="container py-4 text-center">
