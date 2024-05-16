@@ -12,8 +12,12 @@
   "dependencies": {
     "@astrojs/check": "^0.5.8",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/inter": "^5.0.18",
     "astro": "^4.8.4",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "daisyui": "^4.11.1"
   }
 }
