@@ -60,22 +60,34 @@ const handleCountChange = () => {
 <template>
     <form class="flex flex-col gap-4 justify-start md:justify-center" @submit.prevent="null">
         <div class="w-full flex gap-4">
-            <input class="input grow max-md:input-sm input-bordered" name="ip_address" id="ip_address"
-                v-model="IP.address" autocomplete="off" type="text">
-            <select class="select max-md:select-sm select-bordered" @change="handleMaskChange" name="mask_bits"
-                id="mask_bits" v-model="Subnet.maskBits" :disabled="!IP.isValid">
-                <option v-for="n in possibleMaskBits" :key="n" :value="n">{{ n }}</option>
-            </select>
+            <label class="form-control grow">
+                <span class="label-text mb-2">IP Address</span>
+                <input class="input max-md:input-sm input-bordered" name="ip_address" id="ip_address"
+                    v-model="IP.address" autocomplete="off" type="text">
+            </label>
+            <label class="form-control">
+                <span class="label-text mb-2">CIDR</span>
+                <select class="select max-md:select-sm select-bordered" @change="handleMaskChange" name="mask_bits"
+                    id="mask_bits" v-model="Subnet.maskBits" :disabled="!IP.isValid">
+                    <option v-for="n in possibleMaskBits" :key="n" :value="n">{{ n }}</option>
+                </select>
+            </label>
         </div>
         <div class="w-full flex gap-4">
-            <select class="select max-md:select-sm grow select-bordered" @change="handleHostChange" name="subnet_hosts"
-                id="subnet_hosts" v-model="Subnet.hosts" :disabled="!IP.isValid">
-                <option v-for="n in possibleHosts" :key="n" :value="n">{{ n }}</option>
-            </select>
-            <select class="select max-md:select-sm grow select-bordered" @change="handleCountChange" name="subnet_count"
-                id="subnet_count" v-model="Subnet.count" :disabled="!IP.isValid">
-                <option v-for="n in possibleSubnetCount" :key="n" :value="n">{{ n }}</option>
-            </select>
+            <label class="form-control grow">
+                <span class="label-text mb-2">Hosts</span>
+                <select class="select max-md:select-sm select-bordered" @change="handleHostChange" name="subnet_hosts"
+                    id="subnet_hosts" v-model="Subnet.hosts" :disabled="!IP.isValid">
+                    <option v-for="n in possibleHosts" :key="n" :value="n">{{ n }}</option>
+                </select>
+            </label>
+            <label class="form-control grow">
+                <span class="label-text mb-2">Subnets</span>
+                <select class="select max-md:select-sm select-bordered" @change="handleCountChange" name="subnet_count"
+                    id="subnet_count" v-model="Subnet.count" :disabled="!IP.isValid">
+                    <option v-for="n in possibleSubnetCount" :key="n" :value="n">{{ n }}</option>
+                </select>
+            </label>
         </div>
     </form>
 </template>
