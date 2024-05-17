@@ -7,9 +7,19 @@ import Calculator from "../components/Calculator.vue";
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/favicon_dark.svg"
+            media="(prefers-color-scheme: dark)"
+        />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+        <meta
+            name="description"
+            content="Simplify network configuration with our subnet calculator. Calculate subnets, subnet masks, and IP addresses in seconds."
+        />
+        <title>Subnet Calculator</title>
     </head>
     <body class="flex flex-col h-svh">
         <header class="navbar bg-base-300 p-0">
