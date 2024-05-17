@@ -10,7 +10,7 @@ const hostRange = computed(() => getHostRange(networkStatus.value.networkAddress
 </script>
 
 <template>
-    <section class="grid place-items-center">
+    <section class="grid items-center max-md:-order-1">
         <div class="grid gap-2">
             <p class="text-2xl font-black">{{ IP.address }}/{{ Subnet.maskBits }}</p>
             <p>Class of IP: {{ IP.range }}</p>
