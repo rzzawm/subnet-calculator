@@ -5,7 +5,7 @@ export const IP = reactive({
     address: '',
     range: '',
     isValid: false,
-    errorMsg: ''
+    errorMsg: 'Insert an IP Address'
 })
 
 export const Subnet = reactive({

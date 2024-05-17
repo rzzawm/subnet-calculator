@@ -58,7 +58,7 @@ const handleCountChange = () => {
 </script>
 
 <template>
-    <form class="flex flex-col gap-4 justify-center" @submit.prevent="null">
+    <form class="flex flex-col gap-4 justify-start md:justify-center" @submit.prevent="null">
         <div class="w-full flex gap-4">
             <input class="input grow max-md:input-sm input-bordered" name="ip_address" id="ip_address"
                 v-model="IP.address" autocomplete="off" type="text">
